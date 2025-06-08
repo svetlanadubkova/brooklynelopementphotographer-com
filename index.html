@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svetlana Dubkova - Brooklyn Elopement Photographer</title>
+    
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========== GLOBAL STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #F8F6F3;
+            --white: #FFFFFF;
+            --primary-text: #1A1A1A;
+            --secondary-text: #333333;
+            --accent-red: #DC2626;
+            --footer-bg: #2C2C2C;
+            --light-text: #F5F5F5;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ========== MODERN TYPOGRAPHY ========== */
+        .elevated-font {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .elegant-font {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--primary-bg);
+            z-index: 1000;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(248, 246, 243, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .site-title {
+            font-size: 48px;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 0.9;
+            letter-spacing: 2px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .site-title .line1 {
+            display: block;
+        }
+
+        .site-title .line2 {
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-end;
+            margin-top: 10px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--secondary-text);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-red);
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero-section {
+            margin-top: 120px;
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 75vh;
+            object-fit: cover;
+            object-position: center 40%;
+            display: block;
+        }
+
+        .hero-tagline {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            font-size: 32px;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.1;
+            letter-spacing: 4px;
+            color: var(--white);
+        }
+
+        .hero-tagline .line {
+            display: block;
+        }
+
+        /* ========== MY APPROACH SECTION ========== */
+        .approach-section {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .approach-heading {
+            font-size: 48px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .approach-content {
+            /* Content container */
+        }
+
+        .approach-text {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--secondary-text);
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .approach-link {
+            display: inline-block;
+            color: var(--primary-text);
+            text-decoration: underline;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .approach-link:hover {
+            color: var(--accent-red);
+        }
+
+        /* ========== DUAL IMAGE SECTION ========== */
+        .dual-image-section {
+            display: flex;
+            gap: 20px;
+            padding: 0 20px;
+            margin-bottom: 60px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .dual-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dual-image:first-child {
+            flex: 0 0 auto;
+            max-width: calc(50% - 10px);
+        }
+
+        .dual-image:last-child {
+            flex: 0 0 auto;
+            max-width: calc(50% - 10px);
+        }
+
+        /* ========== PHILOSOPHY SECTION ========== */
+        .philosophy-section {
+            background: #1A1A1A;
+            color: var(--white);
+            padding: 80px 40px;
+        }
+
+        .philosophy-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .philosophy-heading {
+            font-size: 48px;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.1;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+        }
+
+        .philosophy-text {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .philosophy-link {
+            display: inline-block;
+            color: var(--white);
+            text-decoration: underline;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transition: opacity 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .philosophy-link:hover {
+            opacity: 0.8;
+        }
+
+        /* ========== PORTFOLIO GALLERY ========== */
+        .portfolio-section {
+            padding: 80px 40px;
+            position: relative;
+        }
+
+        .portfolio-header {
+            margin-bottom: 50px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .portfolio-heading {
+            font-size: 36px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .scroll-arrow {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-bg);
+            border: 2px solid var(--accent-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--accent-red);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .scroll-arrow:hover {
+            background: var(--accent-red);
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .portfolio-gallery {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .portfolio-gallery::-webkit-scrollbar {
+            display: none;
+        }
+
+        .gallery-item {
+            flex-shrink: 0;
+            height: 450px;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Adjust widths for different aspect ratios */
+        .gallery-item.portrait {
+            width: 300px;
+        }
+
+        .gallery-item.landscape {
+            width: 600px;
+        }
+
+        .gallery-item.square {
+            width: 450px;
+        }
+
+        /* ========== ABOUT SECTION ========== */
+        .about-section {
+            padding: 80px 0;
+            background: #FFFFFF;
+            width: 100%;
+        }
+
+        .about-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-content {
+            /* Content container */
+        }
+
+        .about-heading {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .about-text {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--secondary-text);
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .about-link {
+            display: inline-block;
+            color: var(--primary-text);
+            text-decoration: underline;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .about-link:hover {
+            color: var(--accent-red);
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: none;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--primary-text);
+            color: var(--light-text);
+            padding: 30px 40px;
+            border-top: 1px solid rgba(245, 245, 245, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+
+        .footer-copyright {
+            opacity: 0.8;
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+                padding: 15px 20px;
+            }
+
+            .site-title {
+                font-size: 36px;
+            }
+
+            .nav-menu {
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .hero-section {
+                margin-top: 160px;
+            }
+
+            .hero-image {
+                height: 55vh;
+            }
+
+            .hero-tagline {
+                font-size: 22px;
+                left: 20px;
+                bottom: 20px;
+            }
+
+            .approach-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 60px 20px;
+                text-align: center;
+            }
+
+            .approach-heading {
+                font-size: 36px;
+            }
+
+            .dual-image-section {
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 10px;
+                align-items: center;
+            }
+
+            .dual-image:first-child,
+            .dual-image:last-child {
+                max-width: 90%;
+            }
+
+            .philosophy-content {
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            .philosophy-heading {
+                font-size: 36px;
+            }
+
+            .portfolio-section {
+                padding: 60px 20px;
+            }
+
+            .portfolio-header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .portfolio-heading {
+                font-size: 28px;
+            }
+
+            .gallery-item.landscape {
+                width: 500px;
+            }
+
+            .gallery-item.portrait {
+                width: 250px;
+            }
+
+            .about-content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0 20px;
+                text-align: center;
+            }
+
+            .about-heading {
+                font-size: 36px;
+            }
+
+            .footer {
+                padding: 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .footer-links {
+                gap: 20px;
+            }
+        }
+
+        /* ========== SCROLL ANIMATIONS ========== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="site-title">
+            <span class="line1">SVETLANA</span>
+            <span class="line2">DUBKOVA</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="mailto:lana@brooklynelopementphotographer.com">CONTACT</a>
+            <a href="http://nycpartyphotographer.com" target="_blank">EVENTS</a>
+        </nav>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section">
+        <img src="Images/brooklyn courthouse elopement - horizontal.jpg" alt="Brooklyn Courthouse Elopement Photography" class="hero-image">
+        <div class="hero-tagline elevated-font">
+            <span class="line">BROOKLYN</span>
+            <span class="line">ELOPEMENT</span>
+            <span class="line">PHOTOGRAPHER</span>
+        </div>
+    </section>
+
+    <!-- ========== MY APPROACH SECTION ========== -->
+    <section class="approach-section fade-in">
+        <h2 class="approach-heading">MY APPROACH</h2>
+        <div class="approach-content">
+            <p class="approach-text">
+                I'm not big on posed shots or forced smiles. Give me the genuine laugh between old friends, 
+                that second when someone completely loses themselves to the music, the quiet moment in the corner. 
+                Those are the shots that tell the real story. No fuss, no awkward posing, just authentic captures 
+                of people being themselves.
+            </p>
+            <a href="#portfolio-gallery" class="approach-link">EXPLORE PORTFOLIO</a>
+        </div>
+    </section>
+
+    <!-- ========== DUAL B&W IMAGES SECTION ========== -->
+    <section class="dual-image-section fade-in">
+        <img src="Images/BridgetCory-vertical-wife.jpg" alt="Bride Portrait" class="dual-image">
+        <img src="Images/BridgetCory-38-vertical-bw.jpg" alt="Black and White Portrait" class="dual-image">
+    </section>
+
+    <!-- ========== PHILOSOPHY SECTION ========== -->
+    <section class="philosophy-section fade-in">
+        <div class="philosophy-content">
+            <h2 class="philosophy-heading elegant-font">MORE THAN JUST PHOTOGRAPHS</h2>
+            <p class="philosophy-text">
+                I describe my work as classic, intimate, documentary-style portraits and candids. 
+                I blend candid, photojournalistic shots with composed portraits for a timeless, emotional result. 
+                My focus is on the people - I shoot those who think they're "not photogenic." 
+                They're wrong and I'm good at proving it.
+            </p>
+            <a href="https://skovaphotos.com/contact" class="philosophy-link" target="_blank">CONTACT ME</a>
+        </div>
+    </section>
+
+    <!-- ========== PORTFOLIO GALLERY ========== -->
+    <section class="portfolio-section fade-in" id="portfolio-gallery">
+        <div class="portfolio-header">
+            <h2 class="portfolio-heading">ENGAGEMENTS / ELOPEMENTS / INTIMATE WEDDINGS / 
+                <BR>COUPLES / MATERNITY / FAMILY</h2>
+            <div class="scroll-arrow" onclick="scrollGallery()">→</div>
+        </div>
+        <div class="portfolio-gallery" id="gallery">
+            <div class="gallery-item portrait">
+                <img src="Images/ira-boris-vertical2-distant.jpg" alt="Couple on Garden Path">
+            </div>
+            
+            <div class="gallery-item portrait">
+                <img src="Images/iraboris-vertical-fave couple shot.jpg" alt="Couple Portrait">
+            </div>
+          
+            <div class="gallery-item portrait">
+                <img src="Images/ira-boris-vertical-detailshot.jpg" alt="Wedding Detail" class="strip-image">
+            </div>
+            <div class="gallery-item portrait">
+                <img src="Images/BridgetCory-24.-vertical groomjpg.jpg" alt="Groom Portrait">
+            </div>
+            <div class="gallery-item portrait">
+                <img src="Images/BridgetCory-39-vertical-bw.jpg" alt="B&W Couple on Stairs">
+            </div>
+            <div class="gallery-item portrait">
+                <img src="Images/formal-couple-vertical-closeup.jpg" alt="Couple Hands Detail" class="strip-image">
+            </div>
+            <div class="gallery-item portrait">
+                <img src="Images/courthouseelopement-vertical.jpg" alt="Courthouse Elopement">
+            </div>
+            <div class="gallery-item landscape">
+                <img src="Images/funbrooklyn-54-colorful-horizontal.jpg" alt="Colorful Brooklyn Wedding" class="strip-image">
+            </div>
+           
+            <div class="gallery-item landscape">
+                <img src="Images/funbrooklyn-fun-horizontal-colorfoful.jpg" alt="Couple with Red Balloon">
+            </div>
+           
+            <div class="gallery-item landscape">
+                <img src="Images/AdrienneandAsh-horizontal blue.jpg" alt="Couple Blue Tones">
+            </div>
+            <div class="gallery-item landscape">
+                <img src="Images/AdrienneandAsh-horizontal-bright.jpg" alt="Couple in Park">
+            </div>
+            <div class="gallery-item portrait">
+                <img src="Images/tradcouple vertical.jpg" alt="Elegant Couple">
+            </div>
+            
+            <div class="gallery-item landscape">
+                <img src="Images/family-horizontal-snow-winter.png" alt="Family in Snow">
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="about-section fade-in" id="about-lana">
+        <div class="about-content-wrapper">
+            <div class="about-content">
+                <p class="about-text">
+                    Hi, I'm Lana Dubkova. I'm obsessed with capturing those perfect in-between moments. 
+                    Raised in NYC as a first-generation Russian-American, I found escapism in fantasy and imagination. 
+                    I studied photography from high school through the School of Visual Arts and Drexel University. 
+                    Given the opportunity, I always choose a timeless black and white photograph as homage to my many days in the darkroom.
+                </p>
+                <a href="https://skovaphotos.com/contact" class="about-link" target="_blank">CONTACT ME</a>
+            </div>
+            <div>
+                <img src="Images/aboutlana.png" alt="About Lana - Svetlana Dubkova" class="about-image">
+                <h2 class="about-heading">ABOUT LANA</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:lana@brooklynelopementphotographer.com">CONTACT</a>
+                <a href="http://nycpartyphotographer.com" target="_blank">EVENTS</a>
+            </div>
+            <div class="footer-copyright">
+                © SVETLANA DUBKOVA 2025
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 120;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Gallery scroll function
+        function scrollGallery() {
+            const gallery = document.getElementById('gallery');
+            gallery.scrollBy({
+                left: 400,
+                behavior: 'smooth'
+            });
+        }
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
