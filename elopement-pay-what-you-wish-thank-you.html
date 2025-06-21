@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment & Referrals - Svetlana Dubkova Photography</title>
+    
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========== GLOBAL STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #F8F6F3;
+            --white: #FFFFFF;
+            --primary-text: #1A1A1A;
+            --secondary-text: #333333;
+            --accent-red: #DC2626;
+            --footer-bg: #2C2C2C;
+            --light-text: #F5F5F5;
+            --light-border: #E5E5E5;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--primary-bg);
+            z-index: 1000;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(248, 246, 243, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .site-title {
+            font-size: 48px;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 0.9;
+            letter-spacing: 2px;
+            font-family: 'Inter', sans-serif;
+            text-decoration: none;
+            color: var(--primary-text);
+        }
+
+        .site-title .line1 {
+            display: block;
+        }
+
+        .site-title .line2 {
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-end;
+            margin-top: 10px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--secondary-text);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-red);
+        }
+
+        /* ========== MAIN CONTENT ========== */
+        .main-content {
+            margin-top: 100px;
+            padding: 0px 60px 80px 60px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ========== SCROLLING TEXT ========== */
+        .scrolling-text-container {
+            overflow: hidden;
+            white-space: nowrap;
+            margin-bottom: 60px;
+            border-top: 1px solid rgba(26, 26, 26, 0.1);
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+            padding: 20px 0;
+            background: var(--primary-bg);
+        }
+
+        .scrolling-text {
+            display: inline-block;
+            font-size: 18px;
+            font-style: italic;
+            color: var(--secondary-text);
+            animation: scroll 50s linear infinite;
+            letter-spacing: 1px;
+            will-change: transform;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ========== PAGE HEADER ========== */
+        .page-header {
+            text-align: left;
+            margin-bottom: 60px;
+        }
+
+        .page-heading {
+            font-size: 48px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            line-height: 1.1;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 0px;
+            color: var(--primary-text);
+        }
+
+        /* ========== IMAGE DIVIDER ========== */
+        .image-divider {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 80px;
+            padding: 0 20px;
+        }
+
+        .divider-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .two-column-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 120px;
+            align-items: start;
+        }
+
+        /* ========== APPRECIATION COLUMN ========== */
+        .appreciation-section {
+            padding-top: 80px;
+            /* Left column */
+        }
+
+        .section-heading {
+            font-size: 56px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            line-height: 0.9;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 45px;
+        }
+
+        .appreciation-text {
+            font-size: 22px;
+            color: var(--secondary-text);
+            font-style: italic;
+            font-weight: 300;
+            margin-bottom: 70px;
+            line-height: 1.7;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .payment-method {
+            text-align: left;
+            position: relative;
+        }
+
+        .payment-label {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 18px;
+            color: var(--primary-text);
+        }
+
+        .payment-info {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--accent-red);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        /* ========== REFERRAL COLUMN ========== */
+        .referral-section {
+            background: #1A1A1A;
+            color: var(--white);
+            padding: 80px 50px 60px 50px;
+            margin-right: -60px;
+            /* Right column */
+        }
+
+        .referral-heading {
+            font-size: 64px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 45px;
+            line-height: 0.85;
+        }
+
+        .referral-subheading {
+            font-size: 22px;
+            font-style: italic;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 70px;
+            line-height: 1.7;
+        }
+
+        .pricing-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .pricing-tier {
+            text-align: left;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .pricing-tier:last-child {
+            border-bottom: none;
+        }
+
+        .tier-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 20px;
+        }
+
+        .tier-name {
+            font-size: 24px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tier-duration {
+            font-size: 16px;
+            opacity: 0.8;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tier-price {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tier-features {
+            list-style: none;
+            font-size: 16px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .tier-features li {
+            margin-bottom: 8px;
+        }
+
+        .tier-features li:before {
+            content: "•";
+            color: var(--accent-red);
+            margin-right: 12px;
+        }
+
+        .review-section {
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .review-text {
+            font-size: 18px;
+            color: var(--secondary-text);
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .review-link {
+            display: inline-block;
+            color: var(--accent-red);
+            text-decoration: underline;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .review-link:hover {
+            color: var(--primary-text);
+        }
+        .contact-section {
+            text-align: center;
+            margin-top: 120px;
+            grid-column: 1 / -1;
+        }
+
+        .contact-heading {
+            font-size: 36px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .contact-text {
+            font-size: 20px;
+            color: var(--secondary-text);
+            font-style: italic;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .contact-button {
+            display: inline-block;
+            color: var(--primary-text);
+            text-decoration: underline;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .contact-button:hover {
+            color: var(--accent-red);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--primary-text);
+            color: var(--light-text);
+            padding: 15px 40px;
+            margin-top: 120px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 400;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+
+        .footer-copyright {
+            opacity: 0.7;
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+                padding: 15px 20px;
+            }
+
+            .site-title {
+                font-size: 36px;
+            }
+
+            .nav-menu {
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .main-content {
+                margin-top: 180px;
+                padding: 60px 20px;
+            }
+
+            .two-column-section {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .section-heading,
+            .referral-heading {
+                font-size: 42px;
+            }
+
+            .payment-methods {
+                gap: 30px;
+            }
+
+            .referral-section {
+                padding: 40px 30px;
+            }
+
+            .tier-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .footer-links {
+                gap: 20px;
+            }
+        }
+
+        /* ========== SCROLL INDICATOR ========== */
+        .scroll-indicator {
+            position: fixed;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            background: rgba(255, 255, 255, 0.9);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .scroll-arrow {
+            font-size: 20px;
+            color: var(--primary-text);
+            display: block;
+            animation: bounce 2s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: translateX(-50%) scale(1);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            }
+            50% {
+                transform: translateX(-50%) scale(1.08);
+                box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            25% {
+                transform: translateY(-3px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+            75% {
+                transform: translateY(-3px);
+            }
+        }
+
+        .scroll-indicator:hover {
+            background: rgba(255, 255, 255, 1);
+            animation-play-state: paused;
+        }
+
+        .scroll-indicator:hover .scroll-arrow {
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        /* Hide scroll indicator after scrolling */
+        .scroll-indicator.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <a href="/" class="site-title">
+            <span class="line1">SVETLANA</span>
+            <span class="line2">DUBKOVA</span>
+        </a>
+        <nav class="nav-menu">
+            <a href="mailto:lana@brooklynelopementphotographer.com">CONTACT</a>
+            <a href="http://nycpartyphotographer.com" target="_blank">EVENTS</a>
+        </nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main-content">
+        <!-- ========== SCROLLING TEXT ========== -->
+        <section class="scrolling-text-container">
+            <div class="scrolling-text">
+                elopements • engagements • couple portraits • small weddings • maternity • elegant • bespoke • modern • brooklynelopementphotographer.com • elopements • engagements • couple portraits • small weddings • maternity • elegant • bespoke • modern • brooklynelopementphotographer.com • elopements • engagements • couple portraits • small weddings • maternity • elegant • bespoke • modern • brooklynelopementphotographer.com
+            </div>
+        </section>
+
+        <!-- ========== PAGE HEADER ========== -->
+        <section class="page-header fade-in">
+            <h1 class="page-heading">THANK YOU FOR WORKING WITH ME <3</h1>
+        </section>
+
+        <!-- ========== IMAGE DIVIDER ========== -->
+        <section class="image-divider fade-in">
+            <img src="Images/BridgetCory-vertical-wife.jpg" alt="Bride Portrait" class="divider-image">
+            <img src="Images/BridgetCory-38-vertical-bw.jpg" alt="Black and White Portrait" class="divider-image">
+        </section>
+
+        <!-- ========== TWO COLUMN LAYOUT ========== -->
+        <section class="two-column-section fade-in">
+            <!-- APPRECIATION COLUMN -->
+            <div class="appreciation-section">
+                <h2 class="section-heading">EXPRESSIONS OF GRATITUDE</h2>
+                <p class="appreciation-text">
+                    I express my deep appreciation for working with me and taking the time 
+                    to work together. 
+                    <br><br>
+                    If you'd like to express your gratitude for your photo session, 
+                    you can send a contribution below.
+                </p>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <div class="payment-label">VENMO</div>
+                        <div class="payment-info">@svetlana-dubkova</div>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-label">ZELLE</div>
+                        <div class="payment-info">347-738-8058</div>
+                    </div>
+                </div>
+                
+                <div class="review-section">
+                    <p class="review-text">
+                        If you enjoyed working with me, I'd be grateful if you could leave a review.
+                    </p>
+                    <a href="https://g.page/r/CRS6QcJBOMmKEAE/review" target="_blank" class="review-link">LEAVE A REVIEW</a>
+                </div>
+            </div>
+
+            <!-- REFERRAL COLUMN -->
+            <div class="referral-section">
+                <h2 class="referral-heading">REFERRALS</h2>
+                <p class="referral-subheading">
+                    Know someone special who deserves beautiful photographs? 
+                    Please send them my way!
+                </p>
+                <div class="pricing-grid">
+                    <div class="pricing-tier">
+                        <div class="tier-header">
+                            <div class="tier-name">CLASSIC ENGAGEMENT SESSION</div>
+                            <div class="tier-duration">45 Minutes</div>
+                        </div>
+                        <div class="tier-price">$500</div>
+                        <ul class="tier-features">
+                            <li>20-40+ edited images</li>
+                            <li>Online gallery delivery</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-tier">
+                        <div class="tier-header">
+                            <div class="tier-name">EXTENDED ENGAGEMENT SESSION</div>
+                            <div class="tier-duration">60 Minutes</div>
+                        </div>
+                        <div class="tier-price">$650</div>
+                        <ul class="tier-features">
+                            <li>30-50+ edited images</li>
+                            <li>Online gallery delivery</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-tier">
+                        <div class="tier-header">
+                            <div class="tier-name">PREMIUM</div>
+                            <div class="tier-duration">90 Minutes</div>
+                        </div>
+                        <div class="tier-price">$800</div>
+                        <ul class="tier-features">
+                            <li>Full engagement experience</li>
+                            <li>Unlimited outfit changes & locations</li>
+                            <li>50+ edited images</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACT SECTION ========== -->
+        <section class="contact-section fade-in">
+            <h2 class="contact-heading">READY TO BOOK?</h2>
+            <p class="contact-text">
+                I'd love to capture beautiful moments for your friends and family.
+            </p>
+            <a href="mailto:lana@brooklynelopementphotographer.com" class="contact-button">GET IN TOUCH</a>
+        </section>
+    </main>
+
+    <!-- ========== SCROLL INDICATOR ========== -->
+    <div class="scroll-indicator" id="scrollIndicator">
+        <span class="scroll-arrow">↓</span>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:lana@brooklynelopementphotographer.com">CONTACT</a>
+                <a href="http://nycpartyphotographer.com" target="_blank">EVENTS</a>
+            </div>
+            <div class="footer-copyright">
+                © SVETLANA DUBKOVA 2025
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect 
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Hide scroll indicator after scrolling down
+            if (window.scrollY > 200) {
+                scrollIndicator.classList.add('hidden');
+            } else {
+                scrollIndicator.classList.remove('hidden');
+            }
+        });
+
+        // Click to scroll functionality
+        document.getElementById('scrollIndicator').addEventListener('click', function() {
+            window.scrollTo({
+                top: window.innerHeight * 0.8,
+                behavior: 'smooth'
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
