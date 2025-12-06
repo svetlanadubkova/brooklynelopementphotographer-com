@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Svetlana Dubkova - Brooklyn Elopement Photographer</title>
-    
-    <!-- Google Fonts for modern typography -->
+
+    <!-- Google Fonts for luxury typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
     <style>
         /* ========== GLOBAL STYLES ========== */
         * {
@@ -19,34 +19,28 @@
         }
 
         :root {
-            --primary-bg: #F8F6F3;
+            --primary-bg: #f4f4f0;
             --white: #FFFFFF;
-            --primary-text: #1A1A1A;
-            --secondary-text: #333333;
-            --accent-red: #DC2626;
-            --footer-bg: #2C2C2C;
-            --light-text: #F5F5F5;
+            --primary-text: #000000;
+            --secondary-text: #4a4a4a;
+            --accent-gold: #b5a674;
+            --accent-warm: #8b7355;
         }
 
         body {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant', serif;
             background-color: var(--primary-bg);
             color: var(--primary-text);
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
+            font-size: 11px;
+            letter-spacing: 0.045em;
         }
 
-        /* ========== MODERN TYPOGRAPHY ========== */
-        .elevated-font {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        .elegant-font {
-            font-family: 'Inter', sans-serif;
-            font-weight: 800;
-            letter-spacing: 3px;
+        /* ========== TYPOGRAPHY ========== */
+        h1, h2, h3 {
+            font-weight: 300;
+            letter-spacing: 0.08em;
         }
 
         /* ========== HEADER ========== */
@@ -55,525 +49,522 @@
             top: 0;
             left: 0;
             right: 0;
-            background: var(--primary-bg);
+            background: transparent;
             z-index: 1000;
-            padding: 20px 40px;
+            padding: 2.5rem 5rem;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            transition: all 0.3s ease;
+            align-items: center;
+            transition: all 0.4s ease;
         }
 
         .header.scrolled {
-            background: rgba(248, 246, 243, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            background: rgba(244, 244, 240, 0.98);
+            backdrop-filter: blur(15px);
+            padding: 1.5rem 5rem;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
         }
 
         .site-title {
-            font-size: 48px;
-            font-weight: 800;
+            font-size: 1.1rem;
+            font-weight: 400;
             text-transform: uppercase;
-            line-height: 0.9;
-            letter-spacing: 2px;
-            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.15em;
+            font-family: 'Lato', sans-serif;
+            color: var(--primary-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .site-title .line1 {
-            display: block;
-        }
-
-        .site-title .line2 {
-            display: block;
+        .site-title:hover {
+            color: var(--accent-gold);
         }
 
         .nav-menu {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: flex-end;
-            margin-top: 10px;
+            gap: 3rem;
+            align-items: center;
         }
 
         .nav-menu a {
             text-decoration: none;
-            color: var(--secondary-text);
-            font-size: 14px;
-            font-weight: 600;
+            color: var(--primary-text);
+            font-size: 0.85rem;
+            font-weight: 400;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.15em;
             transition: color 0.3s ease;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Lato', sans-serif;
         }
 
         .nav-menu a:hover {
-            color: var(--accent-red);
+            color: var(--accent-gold);
         }
 
         /* ========== HERO SECTION ========== */
         .hero-section {
-            margin-top: 120px;
+            min-height: 90vh;
             position: relative;
+            display: flex;
+            align-items: center;
+            padding: 10rem 5rem 8rem;
+            background: linear-gradient(135deg, #f8f6f3 0%, #f4f4f0 100%);
+        }
+
+        .hero-container {
+            max-width: 1290px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 45% 55%;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            padding-right: 3rem;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-gold);
+            margin-bottom: 2rem;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            margin-bottom: 2.5rem;
+            color: var(--primary-text);
+        }
+
+        .hero-title .highlight {
+            font-style: italic;
+            color: var(--accent-gold);
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--secondary-text);
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border: 1px solid var(--primary-text);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.75rem;
+            font-family: 'Lato', sans-serif;
+            text-decoration: none;
+            color: var(--primary-text);
+            transition: all 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            background: var(--primary-text);
+            color: var(--white);
+        }
+
+        .hero-image-container {
+            position: relative;
+            height: 75vh;
+            overflow: hidden;
         }
 
         .hero-image {
             width: 100%;
-            height: 75vh;
+            height: 100%;
             object-fit: cover;
-            object-position: center 40%;
-            display: block;
-        }
-
-        .hero-tagline {
-            position: absolute;
-            bottom: 30px;
-            left: 40px;
-            font-size: 32px;
-            font-weight: 800;
-            text-transform: uppercase;
-            line-height: 1.1;
-            letter-spacing: 4px;
-            color: var(--white);
-        }
-
-        .hero-tagline .line {
-            display: block;
-        }
-
-        /* ========== MY APPROACH SECTION ========== */
-        .approach-section {
-            padding: 80px 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .approach-heading {
-            font-size: 48px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            line-height: 1.1;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .approach-content {
-            /* Content container */
-        }
-
-        .approach-text {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            color: var(--secondary-text);
-            font-weight: 400;
-            font-style: italic;
-        }
-
-        .approach-link {
-            display: inline-block;
-            color: var(--primary-text);
-            text-decoration: underline;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 16px;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .approach-link:hover {
-            color: var(--accent-red);
-        }
-
-        /* ========== DUAL IMAGE SECTION ========== */
-        .dual-image-section {
-            display: flex;
-            gap: 20px;
-            padding: 0 20px;
-            margin-bottom: 60px;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .dual-image {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .dual-image:first-child {
-            flex: 0 0 auto;
-            max-width: calc(50% - 10px);
-        }
-
-        .dual-image:last-child {
-            flex: 0 0 auto;
-            max-width: calc(50% - 10px);
+            object-position: center;
         }
 
         /* ========== PHILOSOPHY SECTION ========== */
         .philosophy-section {
-            background: #1A1A1A;
-            color: var(--white);
-            padding: 80px 40px;
+            padding: 10rem 5rem;
+            max-width: 1290px;
+            margin: 0 auto;
         }
 
-        .philosophy-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: left;
+        .philosophy-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 8rem;
+            align-items: start;
         }
 
         .philosophy-heading {
-            font-size: 48px;
-            font-weight: 800;
-            text-transform: uppercase;
+            font-size: 3.5rem;
+            font-weight: 300;
             line-height: 1.1;
-            letter-spacing: 4px;
-            margin-bottom: 40px;
+            letter-spacing: 0.05em;
+            position: sticky;
+            top: 10rem;
         }
 
-        .philosophy-text {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 25px;
-            font-weight: 400;
+        .philosophy-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--secondary-text);
+            margin-bottom: 2rem;
             font-style: italic;
         }
 
-        .philosophy-link {
-            display: inline-block;
+        .philosophy-content strong {
+            font-weight: 500;
+            color: var(--primary-text);
+            font-style: normal;
+        }
+
+        /* ========== IMAGE GRID SECTION ========== */
+        .image-grid-section {
+            padding: 5rem 3rem;
+            background: var(--white);
+        }
+
+        .masonry-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            columns: 3;
+            column-gap: 2rem;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .masonry-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .masonry-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ========== THE HOT BRIDE SECTION ========== */
+        .hotbride-section {
+            background: #1a1a1a;
             color: var(--white);
-            text-decoration: underline;
-            font-weight: 600;
+            padding: 10rem 5rem;
+        }
+
+        .hotbride-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hotbride-logo {
+            font-size: 0.75rem;
             text-transform: uppercase;
-            font-size: 16px;
-            letter-spacing: 1px;
+            letter-spacing: 0.25em;
+            color: var(--accent-gold);
+            margin-bottom: 3rem;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .hotbride-title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.03em;
+        }
+
+        .hotbride-description {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            font-style: italic;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+        }
+
+        .hotbride-link {
+            display: inline-block;
+            color: var(--accent-gold);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.85rem;
+            font-family: 'Lato', sans-serif;
+            border-bottom: 1px solid var(--accent-gold);
+            padding-bottom: 0.25rem;
             transition: opacity 0.3s ease;
-            font-family: 'Inter', sans-serif;
         }
 
-        .philosophy-link:hover {
-            opacity: 0.8;
+        .hotbride-link:hover {
+            opacity: 0.7;
         }
 
-        /* ========== PORTFOLIO GALLERY ========== */
-        .portfolio-section {
-            padding: 80px 40px;
-            position: relative;
+        /* ========== DUAL IMAGE FEATURE ========== */
+        .dual-feature-section {
+            padding: 10rem 5rem;
+            max-width: 1290px;
+            margin: 0 auto;
+        }
+
+        .dual-feature-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .dual-feature-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .dual-feature-content {
+            padding: 0 3rem;
+        }
+
+        .dual-feature-content h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .dual-feature-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--secondary-text);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        /* ========== PORTFOLIO SHOWCASE ========== */
+        .portfolio-showcase {
+            padding: 8rem 0;
+            background: var(--primary-bg);
         }
 
         .portfolio-header {
-            margin-bottom: 50px;
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
+            text-align: center;
+            margin-bottom: 5rem;
+            padding: 0 5rem;
+        }
+
+        .portfolio-header h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-header p {
+            font-size: 1rem;
+            color: var(--secondary-text);
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .portfolio-scroll {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .portfolio-heading {
-            font-size: 36px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .scroll-arrow {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary-bg);
-            border: 2px solid var(--accent-red);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: var(--accent-red);
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        .scroll-arrow:hover {
-            background: var(--accent-red);
-            color: var(--white);
-            transform: translateX(5px);
-        }
-
-        .portfolio-gallery {
-            display: flex;
-            gap: 20px;
+            gap: 2rem;
             overflow-x: auto;
-            padding: 20px 0;
+            padding: 2rem 5rem;
             scrollbar-width: none;
             -ms-overflow-style: none;
         }
 
-        .portfolio-gallery::-webkit-scrollbar {
+        .portfolio-scroll::-webkit-scrollbar {
             display: none;
         }
 
-        .gallery-item {
+        .portfolio-item {
             flex-shrink: 0;
-            height: 450px;
-            border-radius: 0;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
             transition: transform 0.3s ease;
         }
 
-        .gallery-item:hover {
-            transform: translateY(-5px);
+        .portfolio-item:hover {
+            transform: scale(1.02);
         }
 
-        .gallery-item img {
+        .portfolio-item.tall {
+            width: 350px;
+            height: 525px;
+        }
+
+        .portfolio-item.wide {
+            width: 600px;
+            height: 400px;
+        }
+
+        .portfolio-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        /* Adjust widths for different aspect ratios */
-        .gallery-item.portrait {
-            width: 300px;
-        }
-
-        .gallery-item.landscape {
-            width: 600px;
-        }
-
-        .gallery-item.square {
-            width: 450px;
-        }
-
-        /* ========== ABOUT SECTION ========== */
-        .about-section {
-            padding: 80px 0;
-            background: #FFFFFF;
-            width: 100%;
-        }
-
-        .about-content-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .about-content {
-            /* Content container */
-        }
-
-        .about-heading {
-            font-size: 48px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            line-height: 1.1;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .about-text {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            color: var(--secondary-text);
-            font-weight: 400;
-            font-style: italic;
-        }
-
-        .about-link {
-            display: inline-block;
-            color: var(--primary-text);
-            text-decoration: underline;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 16px;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .about-link:hover {
-            color: var(--accent-red);
-        }
-
-        .about-image {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: none;
-        }
-
         /* ========== FOOTER ========== */
         .footer {
             background: var(--primary-text);
-            color: var(--light-text);
-            padding: 30px 40px;
-            border-top: 1px solid rgba(245, 245, 245, 0.1);
+            color: var(--white);
+            padding: 5rem;
         }
 
         .footer-content {
-            max-width: 1200px;
+            max-width: 1290px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'Inter', sans-serif;
-            font-size: 12px;
-            font-weight: 400;
-            letter-spacing: 0.5px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 5rem;
+        }
+
+        .footer-column h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 2rem;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .footer-column p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            opacity: 0.8;
+            font-style: italic;
         }
 
         .footer-links {
             display: flex;
-            gap: 30px;
+            flex-direction: column;
+            gap: 1rem;
         }
 
         .footer-links a {
-            color: var(--light-text);
+            color: var(--white);
             text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            opacity: 0.8;
             transition: opacity 0.3s ease;
         }
 
         .footer-links a:hover {
-            opacity: 0.7;
+            opacity: 1;
+            color: var(--accent-gold);
         }
 
-        .footer-copyright {
-            opacity: 0.8;
+        .footer-bottom {
+            max-width: 1290px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.75rem;
+            opacity: 0.6;
+            letter-spacing: 0.1em;
+            font-family: 'Lato', sans-serif;
         }
 
         /* ========== RESPONSIVE DESIGN ========== */
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 20px;
-                padding: 15px 20px;
-            }
-
-            .site-title {
-                font-size: 36px;
-            }
-
-            .nav-menu {
-                flex-direction: row;
-                align-items: center;
-                gap: 20px;
-            }
-
-            .hero-section {
-                margin-top: 160px;
-            }
-
-            .hero-image {
-                height: 55vh;
-            }
-
-            .hero-tagline {
-                font-size: 22px;
-                left: 20px;
-                bottom: 20px;
-            }
-
-            .approach-section {
+        @media (max-width: 1024px) {
+            .hero-container {
                 grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 60px 20px;
+                gap: 4rem;
+            }
+
+            .hero-content {
+                padding-right: 0;
                 text-align: center;
             }
 
-            .approach-heading {
-                font-size: 36px;
+            .hero-title {
+                font-size: 3.5rem;
             }
 
-            .dual-image-section {
-                flex-direction: column;
-                gap: 20px;
-                padding: 0 10px;
-                align-items: center;
-            }
-
-            .dual-image:first-child,
-            .dual-image:last-child {
-                max-width: 90%;
-            }
-
-            .philosophy-content {
-                text-align: center;
-                padding: 0 20px;
+            .philosophy-container {
+                grid-template-columns: 1fr;
+                gap: 4rem;
             }
 
             .philosophy-heading {
-                font-size: 36px;
+                position: static;
             }
 
-            .portfolio-section {
-                padding: 60px 20px;
+            .masonry-grid {
+                columns: 2;
             }
 
-            .portfolio-header {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-
-            .portfolio-heading {
-                font-size: 28px;
-            }
-
-            .gallery-item.landscape {
-                width: 500px;
-            }
-
-            .gallery-item.portrait {
-                width: 250px;
-            }
-
-            .about-content-wrapper {
+            .dual-feature-container {
                 grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 0 20px;
-                text-align: center;
-            }
-
-            .about-heading {
-                font-size: 36px;
-            }
-
-            .footer {
-                padding: 20px;
             }
 
             .footer-content {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-
-            .footer-links {
-                gap: 20px;
+                grid-template-columns: 1fr;
+                gap: 3rem;
             }
         }
 
-        /* ========== SCROLL ANIMATIONS ========== */
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem 2rem;
+            }
+
+            .header.scrolled {
+                padding: 1rem 2rem;
+            }
+
+            .nav-menu {
+                gap: 1.5rem;
+            }
+
+            .hero-section {
+                padding: 8rem 2rem 5rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .philosophy-section {
+                padding: 5rem 2rem;
+            }
+
+            .masonry-grid {
+                columns: 1;
+            }
+
+            .portfolio-scroll {
+                padding: 2rem;
+            }
+
+            .portfolio-item.tall {
+                width: 280px;
+                height: 420px;
+            }
+
+            .portfolio-item.wide {
+                width: 450px;
+                height: 300px;
+            }
+
+            .footer {
+                padding: 3rem 2rem;
+            }
+        }
+
+        /* ========== ANIMATIONS ========== */
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(40px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
@@ -586,145 +577,251 @@
 <body>
     <!-- ========== HEADER ========== -->
     <header class="header" id="header">
-        <div class="site-title">
-            <span class="line1">SVETLANA</span>
-            <span class="line2">DUBKOVA</span>
-        </div>
+        <a href="/" class="site-title">SVETLANA DUBKOVA</a>
         <nav class="nav-menu">
-            <a href="mailto:lana@brooklynelopementphotographer.com">CONTACT</a>
-            <a href="http://nycpartyphotographer.com" target="_blank">EVENTS</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="/blog.html">JOURNAL</a>
+            <a href="mailto:lana@brooklynelopementphotographer.com">INQUIRE</a>
         </nav>
     </header>
 
     <!-- ========== HERO SECTION ========== -->
     <section class="hero-section">
-        <img src="Images/brooklyn courthouse elopement - horizontal.jpg" alt="Brooklyn Courthouse Elopement Photography" class="hero-image">
-        <div class="hero-tagline elevated-font">
-            <span class="line">BROOKLYN</span>
-            <span class="line">ELOPEMENT</span>
-            <span class="line">PHOTOGRAPHER</span>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">BROOKLYN ELOPEMENT PHOTOGRAPHER</div>
+                <h1 class="hero-title">
+                    Classic, intimate, <span class="highlight">documentary-style</span> wedding photography
+                </h1>
+                <p class="hero-description">
+                    I blend candid documentary-style photography with artful, composed portraits for a timeless, emotional result. 
+                </p>
+                <a href="mailto:lana@brooklynelopementphotographer.com" class="hero-cta">Get in Touch</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="Images/brooklyn courthouse elopement - horizontal.jpg" alt="Brooklyn Elopement Photography" class="hero-image">
+            </div>
         </div>
-    </section>
-
-    <!-- ========== MY APPROACH SECTION ========== -->
-    <section class="approach-section fade-in">
-        <h2 class="approach-heading">MY APPROACH</h2>
-        <div class="approach-content">
-            <p class="approach-text">
-                I'm not big on posed shots or forced smiles. Give me the genuine laugh between old friends, 
-                that second when someone completely loses themselves to the music, the quiet moment in the corner. 
-                Those are the shots that tell the real story. No fuss, no awkward posing, just authentic captures 
-                of people being themselves.
-            </p>
-            <a href="#portfolio-gallery" class="approach-link">EXPLORE PORTFOLIO</a>
-        </div>
-    </section>
-
-    <!-- ========== DUAL B&W IMAGES SECTION ========== -->
-    <section class="dual-image-section fade-in">
-        <img src="Images/BridgetCory-vertical-wife.jpg" alt="Bride Portrait" class="dual-image">
-        <img src="Images/BridgetCory-38-vertical-bw.jpg" alt="Black and White Portrait" class="dual-image">
     </section>
 
     <!-- ========== PHILOSOPHY SECTION ========== -->
     <section class="philosophy-section fade-in">
-        <div class="philosophy-content">
-            <h2 class="philosophy-heading elegant-font">MORE THAN JUST PHOTOGRAPHS</h2>
-            <p class="philosophy-text">
-                I describe my work as classic, intimate, documentary-style portraits and candids. 
-                I blend candid, photojournalistic shots with composed portraits for a timeless, emotional result. 
-                My focus is on the people - I shoot those who think they're "not photogenic." 
-                They're wrong and I'm good at proving it.
-            </p>
-            <a href="https://skovaphotos.com/contact" class="philosophy-link" target="_blank">CONTACT ME</a>
+        <div class="philosophy-container">
+            <h2 class="philosophy-heading">My Approach</h2>
+            <div class="philosophy-content">
+                <p>
+                    I'm not interested in matching pajama photos or choreographed sunset twirls. Give me the stolen glances, the ugly-laugh moments, the way someone's face completely transforms when they're lost in the music.
+                </p>
+                <p>
+                    I describe my work as <strong>classic, intimate, documentary-style</strong> with an editorial edge. I blend candid photojournalism with composed environmental portraits for a timeless, emotional result that feels more Vogue than wedding blog.
+                </p>
+                <p>
+                    My focus is on people who think they're "not photogenic." They're wrong, and I'm exceptionally good at proving it. No awkward posing, no forced smiles—just honest captures of you being unapologetically yourselves.
+                </p>
+            </div>
         </div>
     </section>
 
-    <!-- ========== PORTFOLIO GALLERY ========== -->
-    <section class="portfolio-section fade-in" id="portfolio-gallery">
-        <div class="portfolio-header">
-            <h2 class="portfolio-heading">ENGAGEMENTS / ELOPEMENTS / INTIMATE WEDDINGS / 
-                <BR>COUPLES / MATERNITY / FAMILY</h2>
-            <div class="scroll-arrow" onclick="scrollGallery()">→</div>
+    <!-- ========== IMAGE GRID SECTION ========== -->
+    <section class="image-grid-section fade-in">
+        <div class="masonry-grid">
+            <div class="masonry-item">
+                <img src="Images/courthouseelopement-vertical.jpg" alt="Brooklyn Courthouse Elopement">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/AdrienneandAsh-horizontal-bright.jpg" alt="Bright Couple Portrait">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/BridgetCory-52_websize.jpg" alt="Couple Portrait">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/iraboris-vertical-closeup.jpg" alt="Intimate Closeup">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/nycpartyphotographer-wedding-53_websize.jpg" alt="Wedding Reception">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/formal couple vertical.jpg" alt="Elegant Couple">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/AdrienneandAsh-51 - vertical dark.jpg" alt="Dramatic Portrait">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/BridgetCory-39_websize.jpg" alt="Bride and Groom">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/nycpartyphotographer-wedding-67_websize.jpg" alt="Reception Celebration">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/AdrienneandAsh-vertical (2) blue.jpg" alt="Blue Toned Portrait">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/courthouseelopem-horizontal.jpg" alt="Courthouse Ceremony">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/BridgetCory-vertical-wife.jpg" alt="Bride Portrait">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/iraboris-vertical-walking from back.jpg" alt="Couple Walking">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/AdrienneandAsh-vertical - bright.jpg" alt="Bright Vertical">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/BridgetCory-56_websize.jpg" alt="Wedding Detail">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/nycpartyphotographer-wedding-11_websize.jpg" alt="Reception Moment">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/ira-boris-vertical2-distant.jpg" alt="Distant Couple">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/formal-couple-vertical-closeup.jpg" alt="Formal Closeup">
+            </div>
+            <div class="masonry-item">
+                <img src="Images/iraboris-vertical-fave couple shot.jpg" alt="Favorite Shot">
+            </div>
         </div>
-        <div class="portfolio-gallery" id="gallery">
-            <div class="gallery-item portrait">
-                <img src="Images/ira-boris-vertical2-distant.jpg" alt="Couple on Garden Path">
+    </section>
+
+    <!-- ========== FEATURE SECTION ========== -->
+    <section class="hotbride-section fade-in">
+        <div class="hotbride-container">
+            <h2 class="hotbride-title">
+                More Than Just Photographs
+            </h2>
+            <p class="hotbride-description">
+                I describe my work as classic, intimate, documentary-style portraits and candids. I blend candid, photojournalistic shots with composed portraits for a timeless, emotional result. My focus is on the people—I shoot those who think they're "not photogenic." They're wrong and I'm good at proving it.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== DUAL FEATURE SECTION ========== -->
+    <section class="dual-feature-section fade-in">
+        <div class="dual-feature-container">
+            <img src="Images/courthouseelopement-vertical.jpg" alt="Brooklyn Courthouse Elopement" class="dual-feature-image">
+            <div class="dual-feature-content">
+                <h2>Elopements & Intimate Weddings</h2>
+                <p>
+                    Brooklyn courthouse ceremonies, backyard celebrations, rooftop vows at sunset. I specialize in intimate moments that prioritize connection over convention.
+                </p>
+                <p>
+                    Whether it's just the two of you or your closest twenty people, I'll document every genuine moment with the care and artistry it deserves.
+                </p>
             </div>
-            
-            <div class="gallery-item portrait">
-                <img src="Images/iraboris-vertical-fave couple shot.jpg" alt="Couple Portrait">
-            </div>
-          
-            <div class="gallery-item portrait">
-                <img src="Images/ira-boris-vertical-detailshot.jpg" alt="Wedding Detail" class="strip-image">
-            </div>
-            <div class="gallery-item portrait">
-                <img src="Images/BridgetCory-24.-vertical groomjpg.jpg" alt="Groom Portrait">
-            </div>
-            <div class="gallery-item portrait">
-                <img src="Images/BridgetCory-39-vertical-bw.jpg" alt="B&W Couple on Stairs">
-            </div>
-            <div class="gallery-item portrait">
-                <img src="Images/formal-couple-vertical-closeup.jpg" alt="Couple Hands Detail" class="strip-image">
-            </div>
-            <div class="gallery-item portrait">
+        </div>
+    </section>
+
+    <!-- ========== PORTFOLIO SHOWCASE ========== -->
+    <section class="portfolio-showcase fade-in" id="portfolio">
+        <div class="portfolio-header">
+            <h2>Recent Work</h2>
+            <p>Engagements / Elopements / Intimate Weddings / Couples / Maternity / Family</p>
+        </div>
+        <div class="portfolio-scroll" id="portfolioScroll">
+            <div class="portfolio-item tall">
                 <img src="Images/courthouseelopement-vertical.jpg" alt="Courthouse Elopement">
             </div>
-            <div class="gallery-item landscape">
-                <img src="Images/funbrooklyn-54-colorful-horizontal.jpg" alt="Colorful Brooklyn Wedding" class="strip-image">
+            <div class="portfolio-item wide">
+                <img src="Images/brooklyn courthouse elopem-horizontal.jpg" alt="Brooklyn Courthouse">
             </div>
-           
-            <div class="gallery-item landscape">
-                <img src="Images/funbrooklyn-fun-horizontal-colorfoful.jpg" alt="Couple with Red Balloon">
+            <div class="portfolio-item tall">
+                <img src="Images/AdrienneandAsh-51 - vertical dark.jpg" alt="Dramatic Portrait">
             </div>
-           
-            <div class="gallery-item landscape">
-                <img src="Images/AdrienneandAsh-horizontal blue.jpg" alt="Couple Blue Tones">
+            <div class="portfolio-item tall">
+                <img src="Images/BridgetCory-52_websize.jpg" alt="Couple Portrait">
             </div>
-            <div class="gallery-item landscape">
-                <img src="Images/AdrienneandAsh-horizontal-bright.jpg" alt="Couple in Park">
+            <div class="portfolio-item wide">
+                <img src="Images/AdrienneandAsh-horizontal-bright.jpg" alt="Bright Couple">
             </div>
-            <div class="gallery-item portrait">
-                <img src="Images/tradcouple vertical.jpg" alt="Elegant Couple">
+            <div class="portfolio-item tall">
+                <img src="Images/formal couple vertical.jpg" alt="Formal Couple">
             </div>
-            
-            <div class="gallery-item landscape">
-                <img src="Images/family-horizontal-snow-winter.png" alt="Family in Snow">
+            <div class="portfolio-item wide">
+                <img src="Images/nycpartyphotographer-wedding-53_websize.jpg" alt="Reception">
             </div>
-            
+            <div class="portfolio-item tall">
+                <img src="Images/iraboris-vertical-closeup.jpg" alt="Intimate Closeup">
+            </div>
+            <div class="portfolio-item tall">
+                <img src="Images/BridgetCory-39_websize.jpg" alt="Couple">
+            </div>
+            <div class="portfolio-item wide">
+                <img src="Images/AdrienneandAsh-horizontal blue.jpg" alt="Blue Toned">
+            </div>
+            <div class="portfolio-item tall">
+                <img src="Images/AdrienneandAsh-vertical - bright.jpg" alt="Bright Portrait">
+            </div>
+            <div class="portfolio-item wide">
+                <img src="Images/nycpartyphotographer-wedding-67_websize.jpg" alt="Celebration">
+            </div>
+            <div class="portfolio-item tall">
+                <img src="Images/BridgetCory-vertical-wife.jpg" alt="Bride">
+            </div>
+            <div class="portfolio-item tall">
+                <img src="Images/iraboris-vertical-walking from back.jpg" alt="Walking">
+            </div>
+            <div class="portfolio-item wide">
+                <img src="Images/courthouseelopem-horizontal.jpg" alt="Ceremony">
+            </div>
+            <div class="portfolio-item tall">
+                <img src="Images/BridgetCory-56_websize.jpg" alt="Detail">
+            </div>
+            <div class="portfolio-item tall">
+                <img src="Images/tradcouple vertical.jpg" alt="Traditional">
+            </div>
+            <div class="portfolio-item wide">
+                <img src="Images/family-horizontal-snow-winter.png" alt="Family">
+            </div>
         </div>
     </section>
 
-    <!-- ========== ABOUT SECTION ========== -->
-    <section class="about-section fade-in" id="about-lana">
-        <div class="about-content-wrapper">
-            <div class="about-content">
-                <p class="about-text">
-                    Hi, I'm Lana Dubkova. I'm obsessed with capturing those perfect in-between moments. 
-                    Raised in NYC as a first-generation Russian-American, I found escapism in fantasy and imagination. 
-                    I studied photography from high school through the School of Visual Arts and Drexel University. 
-                    Given the opportunity, I always choose a timeless black and white photograph as homage to my many days in the darkroom.
+    <!-- ========== DUAL FEATURE SECTION 2 ========== -->
+    <section class="dual-feature-section fade-in">
+        <div class="dual-feature-container">
+            <div class="dual-feature-content">
+                <h2>About Lana</h2>
+                <p>
+                    Hi, I'm Lana Dubkova. I'm obsessed with capturing those perfect in-between moments—the ones that happen when you forget the camera exists.
                 </p>
-                <a href="https://skovaphotos.com/contact" class="about-link" target="_blank">CONTACT ME</a>
+                <p>
+                    Raised in NYC as a first-generation Russian-American, I found escapism in fantasy and imagination. I studied photography from high school through the School of Visual Arts and Drexel University.
+                </p>
+                <p>
+                    Given the opportunity, I always choose a timeless black and white photograph as homage to my many days in the darkroom. Film grain, accidental blur, and imperfection aren't errors—they're artistic choices.
+                </p>
             </div>
-            <div>
-                <img src="Images/aboutlana.png" alt="About Lana - Svetlana Dubkova" class="about-image">
-                <h2 class="about-heading">ABOUT LANA</h2>
-            </div>
+            <img src="Images/aboutlana.png" alt="About Lana Dubkova" class="dual-feature-image">
         </div>
     </section>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-links">
-                <a href="mailto:lana@brooklynelopementphotographer.com">CONTACT</a>
-                <a href="http://nycpartyphotographer.com" target="_blank">EVENTS</a>
+            <div class="footer-column">
+                <h3>Svetlana Dubkova</h3>
+                <p>Brooklyn-based photographer specializing in elopements, intimate weddings, and editorial couple portraits.</p>
             </div>
-            <div class="footer-copyright">
-                © SVETLANA DUBKOVA 2025
+            <div class="footer-column">
+                <h3>Navigate</h3>
+                <div class="footer-links">
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="/blog.html">Journal</a>
+                    <a href="mailto:lana@brooklynelopementphotographer.com">Contact</a>
+                    <a href="http://nycpartyphotographer.com" target="_blank">Events</a>
+                </div>
             </div>
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <div class="footer-links">
+                    <a href="mailto:lana@brooklynelopementphotographer.com">Email</a>
+                    <a href="https://skovaphotos.com/contact" target="_blank">Contact Form</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 SVETLANA DUBKOVA PHOTOGRAPHY
         </div>
     </footer>
 
@@ -732,44 +829,17 @@
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
-            if (window.scrollY > 50) {
+            if (window.scrollY > 100) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
         });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerOffset = 120;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Gallery scroll function
-        function scrollGallery() {
-            const gallery = document.getElementById('gallery');
-            gallery.scrollBy({
-                left: 400,
-                behavior: 'smooth'
-            });
-        }
-
         // Fade in animation on scroll
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
         };
 
         const observer = new IntersectionObserver(function(entries) {
@@ -782,6 +852,24 @@
 
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
     </script>
 </body>

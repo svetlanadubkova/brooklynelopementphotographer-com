@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is Editorial Wedding Photography? - Svetlana Dubkova</title>
+
+    <!-- Google Fonts for luxury typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========== GLOBAL STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #f4f4f0;
+            --white: #FFFFFF;
+            --primary-text: #000000;
+            --secondary-text: #4a4a4a;
+            --accent-gold: #b5a674;
+            --accent-warm: #8b7355;
+        }
+
+        body {
+            font-family: 'Cormorant', serif;
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-size: 11px;
+            letter-spacing: 0.045em;
+        }
+
+        /* ========== TYPOGRAPHY ========== */
+        h1, h2, h3 {
+            font-weight: 300;
+            letter-spacing: 0.08em;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(244, 244, 240, 0.98);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            padding: 1.5rem 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .site-title {
+            font-size: 1.1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-family: 'Lato', sans-serif;
+            color: var(--primary-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .site-title:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--primary-text);
+            font-size: 0.85rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            transition: color 0.3s ease;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--accent-gold);
+        }
+
+        /* ========== ARTICLE STYLES ========== */
+        .article-hero {
+            padding: 12rem 5rem 5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .article-meta {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-gold);
+            margin-bottom: 2rem;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .article-title {
+            font-size: 4.5rem;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 3rem;
+        }
+
+        .article-featured-image {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            margin-bottom: 5rem;
+        }
+
+        .article-content {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 5rem 8rem;
+        }
+
+        .article-content p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            margin-bottom: 2.5rem;
+            color: var(--secondary-text);
+        }
+
+        .article-content h2 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin: 4rem 0 2rem;
+            color: var(--primary-text);
+        }
+
+        .article-content h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 3rem 0 1.5rem;
+            color: var(--primary-text);
+        }
+
+        .article-content a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-gold);
+            transition: opacity 0.3s ease;
+        }
+
+        .article-content a:hover {
+            opacity: 0.7;
+        }
+
+        .article-content strong {
+            font-weight: 500;
+            color: var(--primary-text);
+        }
+
+        .article-content em {
+            font-style: italic;
+        }
+
+        .pullquote {
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 1.4;
+            margin: 4rem 0;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: var(--primary-text);
+        }
+
+        .article-image {
+            width: 100%;
+            margin: 4rem 0;
+        }
+
+        /* ========== BACK LINK ========== */
+        .back-link {
+            display: inline-block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--primary-text);
+            text-decoration: none;
+            margin-bottom: 3rem;
+            font-family: 'Lato', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-gold);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--primary-text);
+            color: var(--white);
+            padding: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1290px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 5rem;
+        }
+
+        .footer-column h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 2rem;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .footer-column p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            max-width: 1290px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.75rem;
+            opacity: 0.6;
+            letter-spacing: 0.1em;
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem 2rem;
+            }
+
+            .nav-menu {
+                gap: 1.5rem;
+            }
+
+            .article-hero {
+                padding: 10rem 2rem 3rem;
+            }
+
+            .article-title {
+                font-size: 2.5rem;
+            }
+
+            .article-content {
+                padding: 0 2rem 5rem;
+            }
+
+            .pullquote {
+                font-size: 1.5rem;
+            }
+
+            .footer {
+                padding: 3rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <a href="/index.html" class="site-title">SVETLANA DUBKOVA</a>
+        <nav class="nav-menu">
+            <a href="/index.html#portfolio">PORTFOLIO</a>
+            <a href="/blog.html" class="active">JOURNAL</a>
+            <a href="mailto:lana@brooklynelopementphotographer.com">INQUIRE</a>
+        </nav>
+    </header>
+
+    <!-- ========== ARTICLE HERO ========== -->
+    <article class="article-hero">
+        <a href="/blog.html" class="back-link">← Back to Journal</a>
+        <div class="article-meta">Editorial / Weddings</div>
+        <h1 class="article-title">What Is Editorial Wedding Photography?</h1>
+    </article>
+
+    <img src="Images/courthouseelopement-vertical.jpg" alt="Editorial Wedding Photography" class="article-featured-image">
+
+    <!-- ========== ARTICLE CONTENT ========== -->
+    <div class="article-content">
+        <p>
+            If you've spent any time scrolling through wedding inspiration on Instagram or Pinterest, you've probably encountered the term "editorial wedding photography" thrown around liberally. But what does it actually mean? And more importantly—is it right for your wedding?
+        </p>
+
+        <p>
+            Let me break it down. Editorial wedding photography borrows from the visual language of high-fashion magazines—think Vogue, Harper's Bazaar, Kinfolk. It's about capturing authentic moments with intentional composition, sophisticated lighting, and an artistic eye that elevates everyday intimacy into something that feels worthy of publication.
+        </p>
+
+        <h2>It's Not About Posed Perfection</h2>
+
+        <p>
+            Here's where people get confused: editorial doesn't mean stiff, over-styled, or overly art-directed. It's not about orchestrating elaborate setups or making you hold uncomfortable poses for twenty minutes while I fiddle with my camera settings.
+        </p>
+
+        <p>
+            <strong>True editorial wedding photography is the marriage of candid photojournalism and editorial polish.</strong> It's about observing real moments—the way your partner looks at you when they think no one's watching, the chaotic energy of your reception dance floor, the quiet intimacy of getting ready with your closest friends—and framing them with the same care and artistry a magazine photographer would bring to a fashion shoot.
+        </p>
+
+        <div class="pullquote">
+            "The best editorial wedding photos happen when you're too busy living your day to remember the camera exists."
+        </div>
+
+        <h2>Energy Meets Magazine Artistry</h2>
+
+        <p>
+            One of my favorite aspects of editorial wedding photography is how well it translates to capturing the authentic energy of a celebration. When couples want images that feel alive and genuine rather than stiff and staged, that's when this style really shines.
+        </p>
+
+        <p>
+            I photograph weddings with an eye for both candid emotion and editorial composition, capturing the raw, spontaneous moments that make your celebration uniquely yours while maintaining the artistry and polish of high-end magazine photography.
+        </p>
+
+        <h2>What to Expect from an Editorial Approach</h2>
+
+        <p>
+            If you're considering hiring a photographer who describes their work as editorial, here's what you should expect:
+        </p>
+
+        <p>
+            <strong>Minimal direction, maximum observation.</strong> Instead of spending your cocktail hour posing for endless formal portraits, you'll get beautifully composed images of you actually enjoying your day. I'll guide you into good light and flattering environments, but I'm not going to make you tilt your chin three degrees to the left or force an unnatural smile.
+        </p>
+
+        <p>
+            <strong>Attention to composition and light.</strong> Every frame is thoughtfully composed with careful attention to how light falls, how negative space is used, and how the overall image tells a visual story. This is what separates editorial work from standard event photography—the intentionality behind each shot.
+        </p>
+
+        <p>
+            <strong>A photographer who captures genuine energy.</strong> Whether it's the spontaneous joy on the dance floor or those stolen moments in quiet corners, an editorial photographer knows how to document the full emotional spectrum of your day without being intrusive.
+        </p>
+
+        <h2>It's for Couples Who Trust the Process</h2>
+
+        <p>
+            Editorial wedding photography works best when there's trust between photographer and couple. You need to feel comfortable being yourself, not performing for the camera. You need to trust that I'm capturing the moments that matter, even when you're not aware it's happening.
+        </p>
+
+        <p>
+            This style is perfect for couples who value authenticity over perfection, who want images that feel alive rather than airbrushed, and who understand that the "imperfect" moments—the ones with motion blur, unexpected angles, and genuine emotion—are often the most beautiful.
+        </p>
+
+        <div class="pullquote">
+            "Film grain, accidental blur, and imperfection aren't errors—they're artistic choices."
+        </div>
+
+        <h2>The End Result</h2>
+
+        <p>
+            When you hire an editorial wedding photographer, you're investing in a collection of images that feel timeless, sophisticated, and deeply personal. Your gallery will look like it could be published in a magazine—not because every shot is perfectly staged, but because each image was captured with intention, artistry, and an understanding of what makes a photograph truly compelling.
+        </p>
+
+        <p>
+            You'll get photos that transport you back to exactly how your day felt: the joy, the chaos, the intimacy, the energy. Photos that your children will look at one day and understand not just what your wedding looked like, but what it felt like to be there.
+        </p>
+
+        <p>
+            And isn't that what you really want? Not just documentation of an event, but art that captures the essence of one of the most important days of your life.
+        </p>
+
+        <p style="margin-top: 4rem;">
+            <em>If this approach resonates with you, I'd love to photograph your wedding. Whether you're planning a Brooklyn courthouse elopement, an intimate backyard ceremony, or a full celebration that feels more like a party than a production, let's create something beautiful together.</em>
+        </p>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Svetlana Dubkova</h3>
+                <p>Brooklyn-based photographer specializing in elopements, intimate weddings, and editorial couple portraits.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Navigate</h3>
+                <div class="footer-links">
+                    <a href="/index.html#portfolio">Portfolio</a>
+                    <a href="/blog.html">Journal</a>
+                    <a href="mailto:lana@brooklynelopementphotographer.com">Contact</a>
+                    <a href="http://nycpartyphotographer.com" target="_blank">Events</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <div class="footer-links">
+                    <a href="mailto:lana@brooklynelopementphotographer.com">Email</a>
+                    <a href="https://skovaphotos.com/contact" target="_blank">Contact Form</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 SVETLANA DUBKOVA PHOTOGRAPHY
+        </div>
+    </footer>
+</body>
+</html>

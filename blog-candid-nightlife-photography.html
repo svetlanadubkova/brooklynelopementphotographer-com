@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentary-Style Wedding Photography - Svetlana Dubkova</title>
+
+    <!-- Google Fonts for luxury typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========== GLOBAL STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #f4f4f0;
+            --white: #FFFFFF;
+            --primary-text: #000000;
+            --secondary-text: #4a4a4a;
+            --accent-gold: #b5a674;
+            --accent-warm: #8b7355;
+        }
+
+        body {
+            font-family: 'Cormorant', serif;
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-size: 11px;
+            letter-spacing: 0.045em;
+        }
+
+        /* ========== TYPOGRAPHY ========== */
+        h1, h2, h3 {
+            font-weight: 300;
+            letter-spacing: 0.08em;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(244, 244, 240, 0.98);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            padding: 1.5rem 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .site-title {
+            font-size: 1.1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-family: 'Lato', sans-serif;
+            color: var(--primary-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .site-title:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--primary-text);
+            font-size: 0.85rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            transition: color 0.3s ease;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--accent-gold);
+        }
+
+        /* ========== ARTICLE STYLES ========== */
+        .article-hero {
+            padding: 12rem 5rem 5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .article-meta {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-gold);
+            margin-bottom: 2rem;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .article-title {
+            font-size: 4.5rem;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 3rem;
+        }
+
+        .article-featured-image {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            margin-bottom: 5rem;
+        }
+
+        .article-content {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 5rem 8rem;
+        }
+
+        .article-content p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            margin-bottom: 2.5rem;
+            color: var(--secondary-text);
+        }
+
+        .article-content h2 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin: 4rem 0 2rem;
+            color: var(--primary-text);
+        }
+
+        .article-content h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 3rem 0 1.5rem;
+            color: var(--primary-text);
+        }
+
+        .article-content a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-gold);
+            transition: opacity 0.3s ease;
+        }
+
+        .article-content a:hover {
+            opacity: 0.7;
+        }
+
+        .article-content strong {
+            font-weight: 500;
+            color: var(--primary-text);
+        }
+
+        .article-content em {
+            font-style: italic;
+        }
+
+        .pullquote {
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 1.4;
+            margin: 4rem 0;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: var(--primary-text);
+        }
+
+        .article-image {
+            width: 100%;
+            margin: 4rem 0;
+        }
+
+        /* ========== BACK LINK ========== */
+        .back-link {
+            display: inline-block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--primary-text);
+            text-decoration: none;
+            margin-bottom: 3rem;
+            font-family: 'Lato', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-gold);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--primary-text);
+            color: var(--white);
+            padding: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1290px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 5rem;
+        }
+
+        .footer-column h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 2rem;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .footer-column p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            max-width: 1290px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.75rem;
+            opacity: 0.6;
+            letter-spacing: 0.1em;
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem 2rem;
+            }
+
+            .nav-menu {
+                gap: 1.5rem;
+            }
+
+            .article-hero {
+                padding: 10rem 2rem 3rem;
+            }
+
+            .article-title {
+                font-size: 2.5rem;
+            }
+
+            .article-content {
+                padding: 0 2rem 5rem;
+            }
+
+            .pullquote {
+                font-size: 1.5rem;
+            }
+
+            .footer {
+                padding: 3rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <a href="/index.html" class="site-title">SVETLANA DUBKOVA</a>
+        <nav class="nav-menu">
+            <a href="/index.html#portfolio">PORTFOLIO</a>
+            <a href="/blog.html" class="active">JOURNAL</a>
+            <a href="mailto:lana@brooklynelopementphotographer.com">INQUIRE</a>
+        </nav>
+    </header>
+
+    <!-- ========== ARTICLE HERO ========== -->
+    <article class="article-hero">
+        <a href="/blog.html" class="back-link">← Back to Journal</a>
+        <div class="article-meta">Approach / Candid</div>
+        <h1 class="article-title">Documentary-Style Wedding Photography</h1>
+    </article>
+
+    <img src="Images/BridgetCory-56_websize.jpg" alt="Documentary Style Wedding Photography" class="article-featured-image">
+
+    <!-- ========== ARTICLE CONTENT ========== -->
+    <div class="article-content">
+        <p>
+            Documentary-style wedding photography is about capturing life as it unfolds, not as you wish it would look. It's observational rather than directorial, authentic rather than manufactured, emotionally driven rather than aesthetically perfect.
+        </p>
+
+        <p>
+            This approach requires a completely different skill set and mindset than traditional wedding photography. Instead of orchestrating moments, you anticipate them. Instead of posing people, you position yourself to capture genuine interaction. Instead of controlling the environment, you learn to work with what's already there.
+        </p>
+
+        <h2>Capturing Genuine Emotion</h2>
+
+        <p>
+            Think about the moments from a wedding that actually stick with you. Not the formal group shots or the staged cake cutting—those blur together after a while. It's the unguarded moments: someone wiping away tears during vows, the way a parent looks at their child seeing them in their wedding attire for the first time, friends doubled over laughing at an inside joke.
+        </p>
+
+        <p>
+            Those moments can't be recreated or posed. They happen spontaneously, and they're over in seconds. Documentary wedding photography is about being present and ready to capture them when they occur.
+        </p>
+
+        <p>
+            People celebrating, emotions running high, genuine connections happening in real time—these are the elements that make weddings so visually compelling. And you can't orchestrate them; you can only be ready to document them authentically.
+        </p>
+
+        <div class="pullquote">
+            "The best photos happen when people forget the camera exists."
+        </div>
+
+        <h2>It Requires Specific Technical Skills</h2>
+
+        <p>
+            Documentary wedding photography demands technical expertise that goes beyond knowing camera settings. You need to understand how to work in challenging lighting conditions, how to anticipate and capture fleeting moments, how to compose thoughtfully even in chaotic environments.
+        </p>
+
+        <p>
+            When you want <a href="https://thehotbride.com" target="_blank">candid photos that feel natural and unforced</a>, you need a photographer who knows how to work with available light, who understands that imperfection can be beautiful, who can capture compelling images without constant direction or intervention.
+        </p>
+
+        <p>
+            This requires reading a room, anticipating moments before they happen, and positioning yourself to capture them without becoming intrusive. It means knowing when to blend into the background and when to step in with subtle guidance.
+        </p>
+
+        <h2>It's About Invisible Presence</h2>
+
+        <p>
+            The moment someone becomes acutely aware of being photographed, they change. They pose. They stiffen. They become self-conscious. The genuine moment evaporates, replaced by performance.
+        </p>
+
+        <p>
+            <strong>Great documentary photographers work invisibly.</strong> We blend into the environment, move through spaces without disrupting them, capture moments from unexpected angles. We don't ask people to stop what they're doing and perform for the camera—we document what's already happening.
+        </p>
+
+        <p>
+            This means working unobtrusively during your celebration. While you're experiencing your wedding, I'm documenting it—capturing your grandmother's joy on the dance floor, the way your friends embrace you, the quiet moment you steal with your partner away from the crowd.
+        </p>
+
+        <div class="pullquote">
+            "Documentary wedding photography captures emotion, not performance."
+        </div>
+
+        <h2>It Captures Real Emotion</h2>
+
+        <p>
+            When people are genuinely experiencing a moment rather than performing for a camera, the emotion is palpable. You can see it in their eyes, their body language, the way they interact with others.
+        </p>
+
+        <p>
+            Documentary-style wedding photography captures these authentic emotional beats—not what things looked like when everyone posed and smiled, but what it actually felt like to be there. The joy, the tears, the laughter, the quiet intimacy, the overwhelming love.
+        </p>
+
+        <p>
+            This approach prioritizes genuine moments over manufactured ones, emotional truth over aesthetic perfection. The result is a gallery that tells the real story of your day, complete with all its imperfect, beautiful, deeply human moments.
+        </p>
+
+        <h2>The Aesthetic Is Editorial</h2>
+
+        <p>
+            Documentary doesn't mean sacrificing beauty or artistry. The best documentary wedding photography is incredibly editorial—it's just that the editorial quality comes from composition, lighting, and visual storytelling rather than posed setups.
+        </p>
+
+        <p>
+            Understanding how to use shadow and light, how to compose thoughtfully even in chaotic moments, how to find beauty in imperfection—these principles create images that feel both authentic and artistically compelling.
+        </p>
+
+        <p>
+            The result is photography that has editorial polish combined with documentary authenticity. Images that could belong in a magazine while still capturing the genuine reality of your celebration.
+        </p>
+
+        <h2>It Honors Your Authentic Experience</h2>
+
+        <p>
+            Every couple celebrates differently. Some want intimate dinner parties, others want lively dance-floor celebrations, some want quiet courthouse ceremonies followed by drinks with close friends.
+        </p>
+
+        <p>
+            Documentary-style photography works for all of these because it's not about imposing a specific aesthetic—it's about capturing whatever authentic celebration you create.
+        </p>
+
+        <p>
+            Your wedding photos should reflect how your day actually felt, not some idealized Pinterest version. Whatever form your celebration takes, documentary photography captures its genuine energy and emotion.
+        </p>
+
+        <div class="pullquote">
+            "Your photos should transport you back to exactly how your day felt."
+        </div>
+
+        <h2>What This Means for Your Photos</h2>
+
+        <p>
+            When you choose documentary-style wedding photography, you're getting:
+        </p>
+
+        <p>
+            <strong>Authentic emotional moments.</strong> Not posed smiles, but genuine expressions—laughter, tears, joy, tenderness, all the real emotions that make your wedding meaningful.
+        </p>
+
+        <p>
+            <strong>Beautiful, atmospheric images.</strong> Thoughtfully composed photographs that work with natural light and real environments to create compelling visual stories.
+        </p>
+
+        <p>
+            <strong>Candid connections.</strong> The stolen glances, intimate conversations, unexpected emotional beats, and genuine interactions that define your relationships.
+        </p>
+
+        <p>
+            <strong>Editorial quality in unposed moments.</strong> Just because it's candid doesn't mean it's not beautiful. Every frame is thoughtfully composed, even when capturing spontaneous moments.
+        </p>
+
+        <p>
+            <strong>Photos that feel alive.</strong> Images with emotion, energy, and authentic human connection—visual stories that transport you back to how your wedding actually felt.
+        </p>
+
+        <h2>It's for Couples Who Value Authenticity</h2>
+
+        <p>
+            This approach isn't for everyone. If you want traditional formal portraits, perfectly staged group shots, and images where everyone looks directly at the camera, there are many talented photographers who specialize in that style.
+        </p>
+
+        <p>
+            But if you want photos that capture the actual experience of your wedding—the genuine emotion, the unguarded moments, the real connections—then documentary-style photography is the right choice.
+        </p>
+
+        <p>
+            You want someone who won't interrupt intimate moments to adjust poses. Who won't pull you away from your celebration for endless staged shots. Who understands that authenticity creates more compelling images than manufactured perfection.
+        </p>
+
+        <p>
+            You want a photographer who trusts that the best moments happen organically, who values emotional truth over aesthetic perfection, who knows that sometimes imperfection—motion, unexpected composition, natural light—creates images that feel more alive than technical precision.
+        </p>
+
+        <p style="margin-top: 4rem;">
+            <em>If this approach resonates with you, I'd love to discuss your Brooklyn elopement or intimate wedding. Let's create photos that capture the authentic energy and emotion of your celebration. <a href="mailto:lana@brooklynelopementphotographer.com">Get in touch</a> to start the conversation.</em>
+        </p>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Svetlana Dubkova</h3>
+                <p>Brooklyn-based photographer specializing in elopements, intimate weddings, and editorial couple portraits.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Navigate</h3>
+                <div class="footer-links">
+                    <a href="/index.html#portfolio">Portfolio</a>
+                    <a href="/blog.html">Journal</a>
+                    <a href="mailto:lana@brooklynelopementphotographer.com">Contact</a>
+                    <a href="http://nycpartyphotographer.com" target="_blank">Events</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <div class="footer-links">
+                    <a href="mailto:lana@brooklynelopementphotographer.com">Email</a>
+                    <a href="https://skovaphotos.com/contact" target="_blank">Contact Form</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 SVETLANA DUBKOVA PHOTOGRAPHY
+        </div>
+    </footer>
+</body>
+</html>
